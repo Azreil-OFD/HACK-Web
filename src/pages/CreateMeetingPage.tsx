@@ -219,19 +219,6 @@ const CreateApplicationPage: React.FC = () => {
                             <Label htmlFor="needVideoRecording">Необходима видеозапись ВКС</Label>
                         </div>
 
-                        {/* Поле roomId */}
-                        <div>
-                            <Label htmlFor="roomId">ID комнаты</Label>
-                            <Input
-                                id="roomId"
-                                type="number"
-                                {...register("roomId")}
-                            />
-                            {errors.roomId && (
-                                <p className="text-sm text-red-500">{errors.roomId.message}</p>
-                            )}
-                        </div>
-
                         {/* Поле comment */}
                         <div>
                             <Label htmlFor="comment">Комментарий</Label>

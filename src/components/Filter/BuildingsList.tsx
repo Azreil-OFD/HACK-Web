@@ -98,7 +98,7 @@ const BuildingsList: React.FC<BuildingsListProps> = ({ selectedBuildingId, onBui
 
             {/* Выбор комнаты */}
             <div>
-                <Label htmlFor="sendNotificationsAt">Выберите комнату <span className="text-red-500">*</span></Label>
+                <Label htmlFor="roomId">Выберите комнату <span className="text-red-500">*</span></Label>
                 {loadingRooms && <p>Загружаем комнаты...</p>}
                 {error && <p className="text-red-500">{error}</p>}
 
@@ -107,7 +107,7 @@ const BuildingsList: React.FC<BuildingsListProps> = ({ selectedBuildingId, onBui
                     onValueChange={(value) => onRoomSelect(Number(value))}
                     disabled={!selectedBuildingId}
                 >
-                    <SelectTrigger id="room">
+                    <SelectTrigger id="roomId">
                         <SelectValue placeholder="Выберите комнату" />
                     </SelectTrigger>
                     <SelectContent>
